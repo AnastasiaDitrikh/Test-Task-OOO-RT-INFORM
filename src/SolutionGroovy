@@ -1,0 +1,13 @@
+## c языком Groovy не сталкивалась, но, изучив открытые источники, написала следующее решение
+List list = [1, 2, 3, 2, 1, 4, 5, 3, 2, 1]
+Map map = [:]
+
+list.each { element ->
+    if (map.containsKey(element)) {
+        map[element]++
+    } else {
+        map[element] = 1
+    }
+}
+
+println map
